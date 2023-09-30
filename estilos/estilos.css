@@ -1,0 +1,63 @@
+body{
+    background-color: #EFEFEF;
+    padding: 0px;
+    margin: 0px;
+    min-width: 1300px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 1200px;
+}
+.contenedor{
+    padding: 0px;
+    margin: auto;
+    height: 1200px;
+}
+/*La zona con las opciones*/
+.section{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.section p{
+    color: white;
+}
+
+/*Zona de la imagen*/
+#inicio{
+    background-image: url("../imagenes/foto_inicio.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 500px;
+    min-width: 830px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+#inicio #texto {
+    margin-bottom: 160px;
+    color: black;
+}
+#inicio button{
+    width: 20%;
+    background-color: black;
+    font-size: 15px;
+    color: azure;
+}
+/*Zona de la descripción*/
+#cuerpo #descripcion{
+    width: 70%;
+    margin: auto;
+}
+ #descripcion .paquete{
+    display: flex;
+    flex-direction: row;
+    max-height: 400px;
+    margin-bottom: 50px;
+}
+.paquete img{
+width: 40%;
+}
