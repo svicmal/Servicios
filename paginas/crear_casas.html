@@ -1,37 +1,120 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <link rel="stylesheet" href="../estilos/estilos.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <div class="contenedor">
-            <div id="pagina3">
-                <div id="casa">
-                    <div>
-                        <label for="ancho">Ancho:</label>
-                        <input type="number" id="ancho" placeholder="Ancho en píxeles">
-                    </div>
-                    <div>
-                        <label for="alto">Alto:</label>
-                        <input type="number" id="alto" placeholder="Alto en píxeles">
-                    </div>
-                    <button >Generar Parcela</button>
-                    <script src="../script/script.js"></script>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="contenedor">
+        <div id="pagina3">
+            <div id="casa">
+                <div>
+                    <label for="ancho">Ancho:</label>
+                    <input type="number" id="ancho" placeholder="Ancho en píxeles">
                 </div>
-                <div id="muebles">
-                    <div>
-                        <p>armarios</p>
-                        <p>sofas</p>
-                        <p>alfombras</p>
-                        <p>sillas</p>
-                    </div>
-                    <div>
-                        
-                    </div>
+                <div>
+                    <label for="alto">Alto:</label>
+                    <input type="number" id="alto" placeholder="Alto en píxeles">
                 </div>
+                <button onclick="generarParcela()">Generar Parcela</button>
+                <div id="tablaContainer"></div>
+                <a  href="opciones.html"><button>Salir</button></a>
+            </div>
+            <div id="muebles">
+                <div id="accesorios">
+                    <p>Armarios</p>
+                    <p>Sofas</p>
+                    <p>Alfombras</p>
+                    <p>Sillas</p>
+                </div>
+                <!--Esto se cambiará con un javascript para que cuando clickemos en un accesorio se cabien las imagenes-->
+                <div class="paquete">
+                    <img src="../imagenes/descarga.jpg">
+                    <p>algo</p>
+                </div>
+                <div class="paquete">
+                    <img src="../imagenes/descarga.jpg">
+                    <p>algo</p>
+                </div>
+                <div class="paquete">
+                    <img src="../imagenes/descarga.jpg">
+                    <p>algo</p>
+                </div>
+                <div class="paquete">
+                    <img src="../imagenes/descarga.jpg">
+                    <p>algo</p>
+                </div>
+                <div class="paquete">
+                    <img src="../imagenes/descarga.jpg">
+                    <p>algo</p>
+                </div>
+                <div class="paquete">
+                    <img src="../imagenes/descarga.jpg">
+                    <p>algo</p>
+                </div>
+                <div class="paquete">
+                    <img src="../imagenes/descarga.jpg">
+                    <p>algo</p>
+                </div>
+                <div class="paquete">
+                    <img src="../imagenes/descarga.jpg">
+                    <p>algo</p>
+                </div>
+                <div class="paquete">
+                    <img src="../imagenes/descarga.jpg">
+                    <p>algo</p>
+                </div>
+                <div class="paquete">
+                    <img src="../imagenes/descarga.jpg">
+                    <p>algo</p>
+                </div>
+                <div class="paquete">
+                    <img src="../imagenes/descarga.jpg">
+                    <p>algo</p>
+                </div>
+                <div class="paquete">
+                    <img src="../imagenes/descarga.jpg">
+                    <p>algo</p>
+                </div>
+                
             </div>
         </div>
-    </body>
+    </div>
+
+    <script>
+        function generarParcela() {
+            const ancho = parseInt(document.getElementById('ancho').value, 10);
+            const alto = parseInt(document.getElementById('alto').value, 10);
+
+            const tabla = document.createElement('table');
+            const cuerpoTabla = document.createElement('tbody');
+
+            for (let i = 1; i <= alto; i++) {
+                const fila = document.createElement('tr');
+                for (let j = 1; j <= ancho; j++) {
+                    const celda = document.createElement('td');
+                    celda.textContent = "";  // Deja las celdas vacías
+                    celda.style.backgroundColor = 'green';  // Establece el color por defecto a verde
+                    celda.addEventListener('click', function() {
+                        cambiarColorCelda(celda);
+                    });
+                    fila.appendChild(celda);
+                }
+                cuerpoTabla.appendChild(fila);
+            }
+
+            tabla.appendChild(cuerpoTabla);
+
+            const tablaContainer = document.getElementById('tablaContainer');
+            tablaContainer.innerHTML = ''; // Limpia el contenedor antes de agregar la nueva tabla
+            tablaContainer.appendChild(tabla);
+        }
+
+        function cambiarColorCelda(celda) {
+            // Cambia el color de fondo de la celda a azul
+            celda.style.backgroundColor = 'blue';
+        }
+    </script>
+</body>
 </html>
