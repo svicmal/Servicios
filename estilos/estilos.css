@@ -4,12 +4,10 @@ body{
     margin: 0px;
     min-width: 1300px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 1200px;
 }
 .contenedor{
     padding: 0px;
     margin: auto;
-    height: 1200px;
 }
 /*La zona con las opciones*/
 .section{
@@ -41,12 +39,17 @@ body{
     margin-bottom: 160px;
     color: black;
 }
-#inicio button{
+#inicio a {
     width: 20%;
+    padding: 0cm;
+}
+#inicio button{
+    width: 100%;
     background-color: black;
     font-size: 15px;
     color: azure;
 }
+
 /*Zona de la descripción*/
 #cuerpo #descripcion{
     width: 70%;
@@ -56,8 +59,57 @@ body{
     display: flex;
     flex-direction: row;
     max-height: 400px;
-    margin-bottom: 50px;
+    margin-top: 50px;
 }
 .paquete img{
 width: 40%;
+}
+
+/*-----------------------------------------------------------------------------*/
+/*Segunda pagina*/
+#pagina2{
+    display: flex;
+    flex-direction: row;
+}
+#perfil{
+    width: 15%;
+
+    background-color: rgba(17, 17, 17, 0.89);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    color: lightgray;
+
+}
+#opciones{
+    width: 85%;   
+}
+#opciones .opcion {
+    border-bottom: gray solid 2px ;
+}
+#opciones #busqueda{
+    height: 50px;
+    background-color: rgba(17, 17, 17, 0.89);
+    color: #EFEFEF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#opciones #busqueda div{
+    display: flex;
+    flex-direction: row;
+    height: min-content;
+    margin-top: 15px;
+}
+#opciones .titulo{
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+#opciones button{
+    background-color: green;
+    color: aliceblue;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
