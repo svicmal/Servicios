@@ -23,7 +23,7 @@ body{
 
 /*Zona de la imagen*/
 #inicio{
-    background-image: url("../imagenes/foto_inicio.jpg");
+    background-image: url("foto_inicio.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 500px;
@@ -113,3 +113,15 @@ width: 40%;
     font-size: 20px;
     margin-bottom: 20px;
 }
+/*----------------------------------------------------------------------------------------*/
+/*Tercera página*/
+#pagina3{
+    background-image: url(cesped.jpg);
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+#pagina3 #muebles,#pagina3 #casa{
+    width: 50%;
+}
+
