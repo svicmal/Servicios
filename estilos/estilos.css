@@ -124,4 +124,7 @@ width: 40%;
 #pagina3 #muebles,#pagina3 #casa{
     width: 50%;
 }
-
+#muebles div{
+    display: flex;
+    flex-direction: row;
+}
