@@ -1,0 +1,11 @@
+commit 08911e16111a6e805be53ad8495399013cf53023
+Author: svicmal <svicmal@g.educaand.es>
+Date:   Sun Oct 1 16:52:42 2023 +0200
+
+    segunada pagina hecha
+
+commit bd9a5bc600fcdeb96aeab104a96ded0f1e40a1b4
+Author: svicmal <svicmal@g.educaand.es>
+Date:   Sat Sep 30 18:52:14 2023 +0200
+
+    Pagina css sin framework
